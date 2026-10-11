@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Gestion de Usuarios</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Panel de Gestion de Usuarios</h1>
+
+        <!-- Mensajes de estado -->
+        <p id="mensaje-estado" class="mensaje"></p>
+
+        <!-- Formulario de registro y modificacion -->
+        <section class="seccion-formulario">
+            <h2 id="titulo-formulario">Registrar Usuario</h2>
+            <form id="formulario-usuario">
+                <div class="campo">
+                    <label for="id">ID:</label>
+                    <input type="number" id="id" placeholder="Ingrese el ID">
+                </div>
+
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Ingrese el nombre">
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" placeholder="ejemplo@correo.com">
+                </div>
+
+                <div class="campo">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" placeholder="Ingrese la ciudad">
+                </div>
+
+                <div class="acciones-form">
+                    <button type="submit" id="btn-guardar">Agregar</button>
+                    <button type="button" id="btn-cancelar" class="btn-cancelar" style="display: none;">Cancelar
+                        edicion</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Buscador en vivo -->
+        <section class="seccion-buscar">
+            <label for="buscar">Buscar usuario por nombre:</label>
+            <input type="text" id="buscar" placeholder="Escriba un nombre para filtrar...">
+        </section>
+
+        <!-- Tabla de usuarios -->
+        <section class="seccion-tabla">
+            <h2>Lista de Usuarios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Ciudad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-usuarios">
+                    <!-- Filas generadas dinamicamente con JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
